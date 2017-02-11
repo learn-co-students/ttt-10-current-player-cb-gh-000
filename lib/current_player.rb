@@ -1,13 +1,13 @@
 def turn_count(board)
   counter =0
 
-  board.each { | boards |
-    if "#{boards}" == "X" or "#{boards}" =="O"
+  board.each do | boards |
+    if boards == "X" or boards=="O"
       counter +=1
     end
 
 
-  }
+  end 
   return counter
 end
 
@@ -17,4 +17,4 @@ def current_player(board)
   else
     return "O"
   end
-end 
+end
