@@ -19,10 +19,12 @@ def current_player(board)
 
   # Assumes X alway goes first
 
-  if turn_count(board) % 2 == 1 then
-    "O"
-  else
-    "X"
-  end
+  #if turn_count(board) % 2 == 1 then
+  #  "O"
+  #else
+  #  "X"
+  #end
+
+  turn_count(board) % 2 == 1 ? "O" : "X"
 
 end
