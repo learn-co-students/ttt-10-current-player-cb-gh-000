@@ -10,5 +10,5 @@ end
 
 def current_player(board)
   # If current number of plays is even or 0 (first round), X goes next
-  return turn_count(board) % 2 == 0 ? "X" : "O"
+  return turn_count(board).even? ? "X" : "O"
 end
