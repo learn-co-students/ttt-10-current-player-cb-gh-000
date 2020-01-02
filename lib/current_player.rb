@@ -1,15 +1,18 @@
 def turn_count(board)
-  turn =0 
-  board.each do |value|
-    turn += 1
-    return turn
+  counter = 0
+  board.each do |v|
+    if v == "O" || v == "X"
+      counter +=1 
+    end
+  end
+  counter
 end
 
 def current_player(board)
-  player = turn_count(board)
-  if player % 2 == 0
-    return "X"
+  turn_count = turn_count(board)
+  if turn_count%2 == 0 
+    "X"
   else
-    return "O"
+    "O"
   end
 end
